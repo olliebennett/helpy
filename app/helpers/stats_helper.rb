@@ -8,6 +8,6 @@ module StatsHelper
 
   # See: http://stackoverflow.com/a/1341318/1323144
   def mean(array)
-    array.inject{ |sum, el| sum + el }.to_f / array.size
+    array.inject { |sum, el| sum + el }.to_f / array.size
   end
 end
