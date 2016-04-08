@@ -25,7 +25,6 @@ class AdminController < ApplicationController
       .group('topics.id')
       .having('COUNT(posts.id) > 1')
       .ids
-
     @responded_topics = Topic.where(id: responded_topic_ids)
     @closed_topic_count = @topics.closed.count
 
