@@ -3,7 +3,6 @@ class AdminController < ApplicationController
   layout 'admin'
 
   include StatsHelper
-  
   before_action :authenticate_user!
   before_action :verify_admin
   before_action :fetch_counts, :only => ['dashboard','tickets','ticket', 'update_ticket', 'topic_search', 'user_profile']
