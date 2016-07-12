@@ -264,11 +264,7 @@ class Admin::TopicsController < Admin::BaseController
   private
 
   def get_tickets
-    if params[:status].nil?
-      @status = "pending"
-    else
-      @status = params[:status]
-    end
+    @status = params[:status] || 'pending'
 
     case @status
 
